@@ -1,7 +1,9 @@
 const express = require("express")
-const indexRouter = require("./routes/indexRouter")
 const app= express()
 const path = require("node:path")
+
+const indexRouter = require("./routes/indexRouter")
+const newMessageRouter = require("./routes/newMessageRouter")
 
 const PORT = 3000
 
@@ -9,11 +11,9 @@ const PORT = 3000
 app.set("views", path.join(__dirname,"views"));
 app.set("view engine", "ejs")
 
-app.get("/", indexRouter);
+app.use("/", indexRouter);
+app.use("/new", newMessageRouter);
 
-app.get("/new",(req,res)=>{
-    res.send("Express set up successfully at '/new'")
-});
 
 
 
