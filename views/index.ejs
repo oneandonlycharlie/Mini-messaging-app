@@ -1,11 +1,14 @@
 <html>
+    <head>
+        <link rel="stylesheet" href="/index.css">
+    </head>
     <body>
         <h1><%=title %></h1>
+        <a href="/new"> New Message</a>
         <p><% messages.map((message)=> { %>
             <p><%= message.text %> from <%= message.user %> at <%= message.added %></p>
             <a href="user/<%= message.user %>">Detail</a>
         <% }) %>
         </p>
-        <a href="/new"> New Message</a>
     </body>
 </html>
