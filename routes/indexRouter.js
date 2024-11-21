@@ -16,7 +16,7 @@ const messages = [
 
 
 indexRouter.get("/", (req,res)=>{
-    res.render("index", { message: "EJS rocks! and works via controller!" });
+    res.render("index", { title: "Mini messaing board", messages: messages });
 })
 
 module.exports = indexRouter
