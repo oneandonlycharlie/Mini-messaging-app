@@ -1,5 +1,9 @@
 <html>
     <body>
-        <%= message %>
+        <h1><%=title %></h1>
+        <p><% messages.map((message)=> { %>
+            <p><%= message.text %> from <%= message.user %> at <%= message.added %></p>
+        <% }) %>
+        </p>
     </body>
 </html>
