@@ -1,6 +1,7 @@
 const {Router} = require("express")
 const indexRouter = Router()
 const messages = require("../db.js")
+const db = pgp(process.env.DATABASE_URL);
 
 
 indexRouter.get("/", (req,res)=>{

@@ -2,7 +2,6 @@ const express = require("express")
 const app= express()
 const path = require("node:path")
 const assetsPath = path.join(__dirname, "public")
-const db = pgp(process.env.DATABASE_URL);
 
 const indexRouter = require("./routes/indexRouter")
 const newMessageRouter = require("./routes/newMessageRouter")
